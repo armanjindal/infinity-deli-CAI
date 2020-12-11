@@ -1,0 +1,113 @@
+version: "2.0"
+
+nlu:
+- intent: faq/ask_name
+  examples: |
+    - What is your name?
+    - May I know your name?
+    - What do people call you?
+    - Do you have a name for yourself?
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yep 
+    - okay
+    - sounds ok
+    - sure
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no thank you
+
+- intent: remind
+  examples: |
+    - Can you remind me!
+    - Yes please remind me tomorrow
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: inform
+  examples: |
+    - My name is [Arman](name)
+    - I am [Rajan](name)
+    - Called [Maya](name)
+    - [mahima](name)
+    - You can call me [brie](name)
+
+- intent: thankyou
+  examples: |
+    - thank you 
+    - thanks
+    - appreciate it
+    - cheers!
+
+- lookup: name
+  examples: |
+    - Rahul
+    - Mahesh
+    - Arjun 
+    - Rao 
+    - Pooja
+    - Puja 
+    - Naveen
+    - Dhruv 
+    - Diya
+    - Raunak
+    - Sambhav
+    - Kanishk 
+    - Vikram 
+    - Anjali 
+    - Tiara 
+    - Kiran 
+    - Sanjay
+    - Maya 
+    - Riya
+    - Elena
