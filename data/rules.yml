@@ -1,7 +1,12 @@
 version: "2.0"
 
 rules:
-
+- rule: Greet and ask name 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_askName
+  
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -17,7 +22,17 @@ rules:
   - intent: thankyou
   - action: utter_welcome
 
-  - rule: respond to FAQs
-    steps:
-    - intent: faq
-    - action: utter_faq
+- rule: respond to FAQs
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+- rule: out-of-scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase

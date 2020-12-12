@@ -1,62 +1,57 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - remind
-  - bot_challenge
-  - thankyou
-  - inform
-  - faq
-
-entities:
-- name 
-- PERSON
-
-slots:
-  name:
-    type: text
-    influence_conversation: false
-    initial_value: "friend"
-  
-
-responses:
-  utter_greet:
-  - text: "Hello! This is the InfinityDeli. I am a bot that exist to make your experience ordering food as easy and fun as possible."
-
-  utter_ask_name:
-  - text: Before we chat more, what should I call you?
-
-  utter_greet_name:
-  - text: "Nice to meet you {name}"
-  
-  utter_explain_offering:
-  - text: "We offer a Sour Dough and SourDough Pizza made every Sunday, to your choice. We collect order untill 6pm Saturday.
-  This is the offer curated high quality foods, offered exclusivley to our community of Good Food every week, by InfitiyDeli.
-  If you'd like to join save this number!"
-
-  utter_ask_order:
-  - text: "Are you interested in placing an order for this Sunday?"
-    image: https://st.depositphotos.com/1003814/5052/i/950/depositphotos_50523105-stock-photo-pizza-with-tomatoes.jpg
-
-  utter_ask_remind:
-  - text: No worries. If you'd like to be part of the community (one message/week offering our curated foods) make sure to save my number. Let me know if you want a reminder for later!
-
-  utter_order_page:
-  - text: "Click here to order. https://infinitydeli.com/collections/all"
-  
-  utter_goodbye:
-  - text: "Bye! It was a pleasure messaging with you. Hope we speak soon :)"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-  utter_welcome:
-  - text: You are welcome!
-  - text: It is a pleasure. 
-
+version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- affirm
+- inform
+- greet
+- faq:
+    is_retrieval_intent: true
+- goodbye
+- deny
+- remind
+- bot_challenge
+- thankyou
+entities:
+- PERSON
+- name
+slots:
+  name:
+    type: text
+    initial_value: friend
+    influence_conversation: false
+
+responses:
+  utter_faq/ask_infinity:
+  - text: Infinity Deli is a collab between One O Eight Cafe and Artisanal Baking Co. We are an online Deli bringing some of the highest quality ingredients and food products to your door step. Blessings on your food!
+  utter_faq/ask_toppings:
+  - text: You can add mushrooms, sundried tomatoes, jalapanos, cheese and more. Here are some insta pics of what people have made!
+    image: https://infinitydeli.com/#3-insta-feed
+  utter_greet:
+  - text: Hello! This is the InfinityDeli. I am a bot designed to give you an amazing experience ordering and eating food. I'll guide you through the ordering process. Feel free to ask any questions!
+  utter_askName:
+  - text: Before I do that, what should I call you?
+  utter_greetName:
+  - text: Nice to meet you {name}
+  utter_offer:
+  - text: We offer sour dough bread, and sour dough Pizza made every Sunday. We collect order untill 6pm Saturday. This is the first of our many curated high quality foods, offered exclusivley to our community of Good Food every week.
+  utter_askOrder:
+  - text: Are you interested in placing an order for this Sunday?
+    image: https://st.depositphotos.com/1003814/5052/i/950/depositphotos_50523105-stock-photo-pizza-with-tomatoes.jpg
+  utter_orderPage:
+  - text: https://infinitydeli.com/collections/all
+  utter_remindSaveNumber:
+  - text: If you'd like to be part of the community (one message/week offering our curated foods) make sure to save my number!
+  utter_goodbye:
+  - text: Bye! It was a pleasure messaging with you. Hope we speak soon :)
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_welcome:
+  - text: You are welcome!
+  utter_out_of_scope:
+  - text: Sorry, I can't handle that request.
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+

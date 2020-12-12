@@ -1,13 +1,18 @@
 version: "2.0"
-
 nlu:
-- intent: faq/ask_name
+- intent: faq/ask_infinity
   examples: |
-    - What is your name?
-    - May I know your name?
-    - What do people call you?
-    - Do you have a name for yourself?
-
+    - Where can I come to order the food?
+    - where is this made?
+    - who makes it?
+    - Where is infinity deli?
+    - tell me more about the kitchen!
+- intent: faq/ask_toppings
+  examples: |
+    - What toppings can I get on the pizza?
+    - where can I put on the pizza?
+    - Can i put mushrooms on the pizza
+    - toppings?
 - intent: greet
   examples: |
     - hey
@@ -23,7 +28,13 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - Hello
 
+- intent: out of scope
+  examples: |
+    - what is 2 + 2?
+    - what is the meaning of my life?
+    
 - intent: goodbye
   examples: |
     - good afternoon
@@ -37,7 +48,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -46,11 +56,11 @@ nlu:
     - of course
     - that sounds good
     - correct
-    - yep 
+    - yep
     - okay
     - sounds ok
     - sure
-
+    - yes I would
 - intent: deny
   examples: |
     - no
@@ -61,19 +71,12 @@ nlu:
     - no way
     - not really
     - no thank you
-
-- intent: remind
-  examples: |
-    - Can you remind me!
-    - Yes please remind me tomorrow
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: inform
   examples: |
     - My name is [Arman](name)
@@ -81,33 +84,38 @@ nlu:
     - Called [Maya](name)
     - [mahima](name)
     - You can call me [brie](name)
-
+    - [Rajan](name)
+    - [Sidhant](name)
+    - [riya](name)
+    - my name is [brie](name)
 - intent: thankyou
   examples: |
-    - thank you 
+    - thank you
     - thanks
     - appreciate it
     - cheers!
-
 - lookup: name
   examples: |
     - Rahul
     - Mahesh
-    - Arjun 
-    - Rao 
+    - Arjun
+    - Rao
     - Pooja
-    - Puja 
+    - Puja
     - Naveen
-    - Dhruv 
+    - Dhruv
     - Diya
     - Raunak
     - Sambhav
-    - Kanishk 
-    - Vikram 
-    - Anjali 
-    - Tiara 
-    - Kiran 
+    - Kanishk
+    - Vikram
+    - Anjali
+    - Tiara
+    - Kiran
     - Sanjay
-    - Maya 
+    - Maya
     - Riya
     - Elena
+    - Digvijay
+    - John
+    - Josh

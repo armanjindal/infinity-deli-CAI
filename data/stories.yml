@@ -6,32 +6,32 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_ask_name
+  - action: utter_askName
   - intent: inform
-  - action: utter_explain_offering
-  - action: utter_greet_name
-  - action: utter_ask_order
+    entities:
+    - name: brie
+  - slot_was_set:
+    - name: brie
+  - action: utter_greetName
+  - action: utter_offer
+  - action: utter_askOrder
   - intent: affirm
-  - action: utter_order_page
+  - action: utter_orderPage
 
 - story: Happy Path - First Time - Exit at ask order
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_ask_name
+  - action: utter_askName
   - intent: inform
-  - action: utter_first_time_introduction
-  - action: utter_ask_order
+    entities:
+    - name: brie
+  - slot_was_set:
+    - name: brie
+  - action: utter_greetName
+  - action: utter_offer
+  - action: utter_askOrder
   - intent: deny
-  - action: utter_ask_remind
-  - intent: remind
+  - action: utter_remindSaveNumber
   - action: utter_goodbye
 
-
-- story: Happy Path - Exit 
-  steps:
-  - action: utter_ask_order
-  - intent: deny
-  - action: utter_ask_remind
-  - intent: deny
-  - action: utter_goodbye
