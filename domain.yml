@@ -27,7 +27,6 @@ responses:
   - text: Infinity Deli is a collab between One O Eight Cafe and Artisanal Baking Co. We are an online Deli bringing some of the highest quality ingredients and food products to your door step. Blessings on your food!
   utter_faq/ask_toppings:
   - text: You can add mushrooms, sundried tomatoes, jalapanos, cheese and more. Here are some insta pics of what people have made!
-    image: https://infinitydeli.com/#3-insta-feed
   utter_greet:
   - text: Hello! This is the InfinityDeli. I am a bot designed to give you an amazing experience ordering and eating food. I'll guide you through the ordering process. Feel free to ask any questions!
   utter_askName:

@@ -7,12 +7,14 @@ nlu:
     - who makes it?
     - Where is infinity deli?
     - tell me more about the kitchen!
+
 - intent: faq/ask_toppings
   examples: |
     - What toppings can I get on the pizza?
     - where can I put on the pizza?
     - Can i put mushrooms on the pizza
     - toppings?
+
 - intent: greet
   examples: |
     - hey
@@ -77,6 +79,7 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
 - intent: inform
   examples: |
     - My name is [Arman](name)
@@ -94,6 +97,7 @@ nlu:
     - thanks
     - appreciate it
     - cheers!
+
 - lookup: name
   examples: |
     - Rahul
