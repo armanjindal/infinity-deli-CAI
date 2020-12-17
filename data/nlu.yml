@@ -7,14 +7,12 @@ nlu:
     - who makes it?
     - Where is infinity deli?
     - tell me more about the kitchen!
-
 - intent: faq/ask_toppings
   examples: |
     - What toppings can I get on the pizza?
     - where can I put on the pizza?
     - Can i put mushrooms on the pizza
     - toppings?
-
 - intent: greet
   examples: |
     - hey
@@ -31,12 +29,10 @@ nlu:
     - goodevening
     - good afternoon
     - Hello
-
 - intent: out of scope
   examples: |
     - what is 2 + 2?
-    - what is the meaning of my life?
-    
+    - what is the meaning of my life?  
 - intent: goodbye
   examples: |
     - good afternoon
@@ -79,7 +75,6 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: inform
   examples: |
     - My name is [Arman](name)
