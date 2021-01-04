@@ -28,9 +28,9 @@ responses:
   utter_faq/ask_toppings:
   - text: You can add mushrooms, sundried tomatoes, jalapanos, cheese and more. Here are some insta pics of what people have made!
   utter_greet:
-  - text: Hello! This is the InfinityDeli. I am a bot designed to give you an amazing experience ordering and eating food. I'll guide you through the ordering process. Feel free to ask any questions!
+  - text: Hello! This is the InfinityDeli. I am a bot designed to give you an amazing experience ordering food. I'll guide you through the ordering process. Feel free to ask any questions!
   utter_askName:
-  - text: Before I do that, what should I call you?
+  - text: Before I do help, what should I call you?
   utter_greetName:
   - text: Nice to meet you {name}
   utter_offer:
