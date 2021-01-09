@@ -15,7 +15,19 @@ stories:
   - intent: affirm
   - action: utter_orderPage
 
-
+- story: Happy Path - First Time Users
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: first_form
+  - active_loop: first_form
+  - active_loop: null
+  - action: utter_greetName
+  - action: utter_offer
+  - action: utter_askOrder
+  - intent: deny
+  - action: utter_remindSaveNumber
+  - action: utter_goodbye
 
 # - story: Happy Path - First Time Users - No name extracted 
 #   steps:
