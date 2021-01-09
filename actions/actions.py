@@ -10,7 +10,6 @@ def extractName(slot_value, tracker):
     name_entity = next(tracker.get_latest_entity_values("name"), None)
     PERSON_entity = next(tracker.get_latest_entity_values("PERSON"), None)
     resp_words = slot_value.split()
-    print(f"THIS RAN {slot_value}, {name_entity}, {PERSON_entity}, {resp_words}")
     if name_entity:
         return name_entity.capitalize()    
     if PERSON_entity:
@@ -34,5 +33,5 @@ class ValidateFirstTimeForm(FormValidationAction):
         if name:
             return {"userName":name}
         else:
-            dispatcher.utter_message(text="Sorry I missed that. Can you _just_ your first name for me?")
+            dispatcher.utter_message(text="Sorry I missed that. Can you _just_ type your first name for me?")
             return {"userName": None}

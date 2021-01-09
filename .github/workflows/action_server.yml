@@ -29,7 +29,7 @@ jobs:
         docker_image_tag: ${{ github.sha }}
         requirements_file: 'actions/requirements-actions.txt'
   
-    # RE ADD when using a Kubernetes deployment with Helm. Currently using a Docker compose
+    # RE ADD when using a Kubernetes or MicroK8s deployment with Helm. Currently using a Docker Commpose on a VM 
     # - name: GCP Auth
     #   env:
     #     GCLOUD_SERVICE_ACCOUNT_KEYFILE: ${{ secrets.GCLOUD_AUTH }}
