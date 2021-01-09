@@ -2,6 +2,7 @@ version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
 intents:
 - affirm
 - inform
@@ -13,14 +14,23 @@ intents:
 - remind
 - bot_challenge
 - thankyou
+
 entities:
 - PERSON
 - name
+
 slots:
-  name:
+  userName:
     type: text
-    initial_value: friend
     influence_conversation: false
+  requested_slot:
+    type: text
+    influence_conversation: false
+
+forms:
+  first_form:
+    userName:
+    - type: from_text
 
 responses:
   utter_faq/ask_infinity:
@@ -28,20 +38,20 @@ responses:
   utter_faq/ask_toppings:
   - text: You can add mushrooms, sundried tomatoes, jalapanos, cheese and more. Here are some insta pics of what people have made!
   utter_greet:
-  - text: Hello! This is the InfinityDeli. I am a bot designed to give you an amazing experience ordering food. I'll guide you through the ordering process. Feel free to ask any questions!
-  utter_askName:
-  - text: Before I do help, what should I call you?
+  - text: "Hello! 👋🏾 This is the InfinityDeli. I am a bot designed to give you an amazing experience ordering food. I'll guide you through the ordering process. You can ask me any questions you have! 🧐"
+  utter_ask_userName:
+  - text: What is your name?
   utter_greetName:
-  - text: Nice to meet you {name}
+  - text: Nice to meet you {userName}
   utter_offer:
-  - text: We offer sour dough bread, and sour dough Pizza made every Sunday. We collect order untill 6pm Saturday. This is the first of our many curated high quality foods, offered exclusivley to our community of Good Food every week.
+  - text: We offer sour dough bread, and sour dough Pizza made every Sunday. We collect order untill 6pm Saturday. This is the first of our many curated high quality foods, offered exclusivley to our 'Good Food' community every week.
   utter_askOrder:
   - text: Are you interested in placing an order for this Sunday?
     image: https://st.depositphotos.com/1003814/5052/i/950/depositphotos_50523105-stock-photo-pizza-with-tomatoes.jpg
   utter_orderPage:
   - text: https://infinitydeli.com/collections/all
   utter_remindSaveNumber:
-  - text: If you'd like to be part of the community (one message/week offering our curated foods) make sure to save my number!
+  - text: If you'd like to be part of the community (one message/week offering our curated foods) make sure to save my number and you will hear about the food we are offering.
   utter_goodbye:
   - text: Bye! It was a pleasure messaging with you. Hope we speak soon :)
   utter_iamabot:
@@ -52,5 +62,8 @@ responses:
   - text: Sorry, I can't handle that request.
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_default:
+  - text: I can't seem to understand what you are saying! You can ask me to order, or a general question about InfinityDeli and our Pizza!
 
-
+actions:
+- validate_first_form

@@ -2,10 +2,11 @@ version: "2.0"
 
 rules:
 - rule: Greet and ask name 
+  conversation_start: true
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_askName
+  wait_for_user_input: false
   
 - rule: Say goodbye anytime the user says goodbye
   steps:

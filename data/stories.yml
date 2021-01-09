@@ -6,32 +6,54 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_askName
-  - intent: inform
-    entities:
-    - name: brie
-  - slot_was_set:
-    - name: brie
+  - action: first_form
+  - active_loop: first_form
+  - active_loop: null
   - action: utter_greetName
   - action: utter_offer
   - action: utter_askOrder
   - intent: affirm
   - action: utter_orderPage
 
-- story: Happy Path - First Time - Exit at ask order
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_askName
-  - intent: inform
-    entities:
-    - name: brie
-  - slot_was_set:
-    - name: brie
-  - action: utter_greetName
-  - action: utter_offer
-  - action: utter_askOrder
-  - intent: deny
-  - action: utter_remindSaveNumber
-  - action: utter_goodbye
+# - story: Happy Path - First Time - Exit at ask order
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_askName
+#   - intent: inform
+#     entities:
+#     - name: brie
+#   - slot_was_set:
+#     - name: brie
+#   - action: utter_greetName
+#   - action: utter_offer
+#   - action: utter_askOrder
+#   - intent: deny
+#   - action: utter_remindSaveNumber
+#   - action: utter_goodbye
+
+# - story: Happy Path - First Time Users - No name extracted 
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_askName
+#   - intent: inform
+#   - action: utter_greetName
+#   - action: utter_offer
+#   - action: utter_askOrder
+#   - intent: affirm
+#   - action: utter_orderPage
+
+# - story: Happy Path - First Time - no name extracted
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_askName
+#   - intent: inform
+#   - action: utter_greetName
+#   - action: utter_offer
+#   - action: utter_askOrder
+#   - intent: deny
+#   - action: utter_remindSaveNumber
+#   - action: utter_goodbye
 

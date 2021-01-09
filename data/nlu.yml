@@ -7,14 +7,12 @@ nlu:
     - who makes it?
     - Where is infinity deli?
     - tell me more about the kitchen!
-
 - intent: faq/ask_toppings
   examples: |
     - What toppings can I get on the pizza?
     - where can I put on the pizza?
     - Can i put mushrooms on the pizza
     - toppings?
-
 - intent: greet
   examples: |
     - hey
@@ -31,12 +29,10 @@ nlu:
     - goodevening
     - good afternoon
     - Hello
-
 - intent: out of scope
   examples: |
     - what is 2 + 2?
-    - what is the meaning of my life?  
-
+    - what is the meaning of my life?
 - intent: goodbye
   examples: |
     - good afternoon
@@ -50,7 +46,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -65,8 +60,7 @@ nlu:
     - sure
     - yes I would
     - okie
-    - yep
-
+    - Yes!
 - intent: deny
   examples: |
     - no
@@ -77,7 +71,6 @@ nlu:
     - no way
     - not really
     - no thank you
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -94,36 +87,10 @@ nlu:
     - [Sidhant](name)
     - [riya](name)
     - my name is [brie](name)
-
+    - my name is [arman](name)
 - intent: thankyou
   examples: |
     - thank you
     - thanks
     - appreciate it
     - cheers!
-
-- lookup: name
-  examples: |
-    - Rahul
-    - Mahesh
-    - Arjun
-    - Rao
-    - Pooja
-    - Puja
-    - Naveen
-    - Dhruv
-    - Diya
-    - Raunak
-    - Sambhav
-    - Kanishk
-    - Vikram
-    - Anjali
-    - Tiara
-    - Kiran
-    - Sanjay
-    - Maya
-    - Riya
-    - Elena
-    - Digvijay
-    - John
-    - Josh
